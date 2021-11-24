@@ -1,0 +1,128 @@
+$border-radius: 0.15rem;
+$dark-theme: false;
+$primary: #f47920;
+$secondary: #1b2935;
+$info: #0dcaf0;
+$success: #198754;
+$warning: #ffc107;
+$error: #dc3545;
+$body-text: #1b2935;
+$body-bg: #ffffff;
+$headings-text: #1b2935;
+$subtle-text: #6c757d;
+$disabled-text: #8f8f8f;
+$component-text: #1b2935;
+$component-bg: #ffffff;
+$base-text: #1b2935;
+$base-bg: #f8f9fa;
+$hovered-text: #1b2935;
+$hovered-bg: #e9ecef;
+$selected-text: #ffffff;
+$selected-bg: #f47920;
+$button-text: #ffffff;
+$button-bg: #1b2935;
+$link-text: #f47920;
+$link-hover-text: #1b2935;
+$series-a: #f47920;
+$series-b: #1b2935;
+$series-c: #ffbe44;
+$series-d: #3e5366;
+$series-e: #ce7535;
+$series-f: #1e4668;
+@import "~@progress/kendo-theme-bootstrap/dist/all.scss";
+.pointer {
+    cursor: pointer;
+}
+
+.k-grid {
+    font-family: "Poppins", sans-serif !important;
+    border-color: rgba(0, 0, 0, 0.0) !important;
+    color: var(--info) !important;
+    background-color: #ffffff !important;
+    .k-indicator-container {
+        font-size: 11px;
+        font-weight: 600;
+    }
+    th {
+        font-size: 11px;
+        font-weight: 600;
+    }
+    td {
+        font-size: 11px;
+        font-weight: 300;
+    }
+}
+
+.k-button {
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.k-textbox {
+    font-size: 11px;
+    width: 100%;
+    border-radius: 30px;
+    max-width: 320px;
+}
+
+.k-animation-container-shown,
+.k-animation-container>.k-popup {
+    background-color: var(--info);
+}
+
+.k-columnmenu-item {
+    font-size: 11px;
+    color: var(--primary);
+    font-weight: 600;
+    &:hover {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.k-pager-refresh,
+.k-pager-nav.k-link {
+    font-size: 11px;
+    border: 0 !important;
+    border-radius: 30px;
+}
+
+.k-grid .k-grouping-row td {
+    font-weight: 600;
+}
+
+.k-pager-info {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.k-toolbar {
+    background-color: #fff;
+}
+
+.k-grouping-header {
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+.k-grid-pager {
+    background-color: #fff;
+}
+
+.menu-backdrop {
+    display: block;
+    position: fixed;
+    z-index: 999998;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    transition: all ease-in-out 0.1s;
+    &.in {
+        visibility: visible;
+        transition: all ease-in-out 0.4s;
+    }
+}

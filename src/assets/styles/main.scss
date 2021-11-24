@@ -1,0 +1,209 @@
+.navbar {
+    box-shadow: 0 4px 20px -8px rgb(0 0 0 / 27%);
+    .nav-item {
+        height: 76px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.hero {
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background-image: url('../img/WBC-Hero-Image-2.11888d83.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-top: 73px;
+    h1 {
+        font-size: 3.5rem;
+        color: #fff;
+        text-shadow: 1px 0 2px rgb(0 0 0 / 37%), 0 0 8px rgb(0 0 0 / 27%);
+    }
+    p {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        text-shadow: 1px 0 2px rgb(0 0 0 / 37%), 0 0 8px rgb(0 0 0 / 27%);
+    }
+}
+
+.cta {
+    font-size: 1.375rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    min-width: 200px;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    i {
+        font-size: .75rem;
+    }
+}
+
+.dashboard-header {
+    background-color: var(--info);
+    border-bottom: 1px solid var(--gray-dark);
+    .dashboard-main-navigation {
+        display: flex;
+        height: 50px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .brand-icons {
+            display: inline-flex;
+            align-items: center;
+            .dashboard-logo {
+                height: 30px;
+            }
+            a {
+                margin-left: 20px;
+                font-size: 1.5rem;
+            }
+        }
+        .activity-bar {
+            display: inline-flex;
+            align-items: center;
+            a {
+                font-size: 1rem;
+                height: 29px;
+                position: relative;
+                color: #fff;
+                .badge {
+                    font-size: 9px;
+                    position: absolute;
+                    border-radius: 20px;
+                    height: 20px;
+                    width: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: -3px;
+                    right: -3px;
+                }
+            }
+            .focus-area {
+                .dropdown-menu {
+                    border-radius: 0;
+                    background-color: #121212;
+                    left: auto !important;
+                    right: 0;
+                    width: 250px;
+                    padding-bottom: 0;
+                    z-index: 999999;
+                    .notif-icon {
+                        font-size: 20px;
+                        color: var(--primary);
+                        width: 40px;
+                    }
+                    .dropdown-header {
+                        font-weight: 600 !important;
+                        font-size: 11px;
+                    }
+                    .dropdown-item {
+                        font-size: 12px;
+                        height: 25px;
+                        &:hover,
+                        &:focus {
+                            background-color: rgba(0, 0, 0, 0.2);
+                            color: var(--primary);
+                        }
+                    }
+                    .last-clickable {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 10px;
+                        font-size: 12px;
+                        margin: 0;
+                        color: var(--primary);
+                        text-decoration: none;
+                    }
+                    .link-icon {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.message-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .profile-img {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-image: url('https://thispersondoesnotexist.com/image');
+        border-radius: 40px;
+        background-position: center;
+        background-size: cover;
+        border: 2px solid var(--info);
+        transition: all ease-in-out;
+        &.active {
+            border: 2px solid var(--primary);
+            transition: all ease-in-out;
+        }
+    }
+    .message-preview {
+        text-align: left;
+        color: #fff;
+        width: calc(100% - 90px);
+        p {
+            font-size: 12px;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}
+
+.profile-trigger {
+    text-decoration: none;
+    display: flex;
+    border-left: 1px solid #333;
+    padding-left: 15px;
+    &:hover {
+        text-decoration: none;
+    }
+    .profile-image {
+        border-radius: 40px;
+        margin-right: 10px;
+    }
+    span {
+        display: block;
+        font-size: 10px;
+        &:first-child {
+            font-weight: 600;
+        }
+        &:last-child {
+            font-weight: 300;
+        }
+    }
+}
+
+.main-heading {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 30px 0 0;
+    color: rgba(255, 255, 255, 0.6);
+}

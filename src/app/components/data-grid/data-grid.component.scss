@@ -1,0 +1,65 @@
+.vehicle-photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.gallery {
+    position: fixed;
+    left: 100%;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999999999;
+    padding: 20px;
+    transition: all ease-in-out 0.5s;
+    &.in {
+        left: 0;
+        right: 0;
+        transition: all ease-in-out 0.5s;
+    }
+    .clsoe-btn {
+        font-weight: 600;
+        color: var(--primary);
+        font-size: 11px;
+        border: 0;
+        background-color: transparent;
+    }
+    .active-image {
+        width: 100%;
+        height: 50vh;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 20px 0;
+        transition: all ease-in-out 0.5s;
+    }
+    .thumbnail-previews {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        height: 40vh;
+        .thumbnail-images {
+            width: 100px;
+            height: 130px;
+            margin: 10px 10px 0 0;
+            border-radius: 5px;
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+            border: 2px solid #fff;
+            transition: all ease-in-out 0.5s;
+            &.active {
+                border: 2px solid var(--primary);
+                transition: all ease-in-out 0.5s;
+            }
+        }
+    }
+}

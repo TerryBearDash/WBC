@@ -1,0 +1,82 @@
+.right-side-nav {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    position: fixed;
+    right: -220px;
+    top: 51px;
+    overflow-y: auto;
+    bottom: 0;
+    left: 100%;
+    padding: 20px;
+    background-color: var(--info);
+    transition: all ease-in-out 0.5s;
+    z-index: 999999;
+    &.in {
+        right: 0;
+        left: auto;
+        background-color: var(--gray-dark);
+        transition: all ease-in-out 0.5s;
+    }
+    .input-group {
+        border-radius: 30px;
+        overflow: hidden;
+        background-color: var(--gray-dark);
+    }
+    .side-menu-items {
+        margin-top: 20px;
+        .menu-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            height: 23px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+            &:hover {
+                color: rgba(255, 255, 255, 1);
+                transition: all ease-in-out 0.5s;
+                svg {
+                    &:nth-child(1) {
+                        color: rgba(255, 255, 255, 1);
+                        transition: all ease-in-out 0.5s;
+                    }
+                }
+            }
+            &:focus {
+                color: var(--primary);
+                transition: all ease-in-out 0.5s;
+                svg {
+                    &:nth-child(1) {
+                        color: var(--primary);
+                        transition: all ease-in-out 0.5s;
+                    }
+                }
+            }
+            span {
+                font-weight: 300;
+            }
+            div {
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            svg {
+                width: 20px;
+                height: 20px;
+                &:nth-child(1) {
+                    margin-right: -8px;
+                    color: rgba(255, 255, 255, 0.3);
+                }
+                &:last-child {
+                    width: 10px;
+                    height: 10px;
+                    color: rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+}

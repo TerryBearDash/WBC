@@ -1,0 +1,39 @@
+<div class="right-side-nav" [ngClass]="{'in': shownav}">
+    <h6 class="main-heading mt-0">your space</h6>
+    <hr>
+    <div class="side-menu-items">
+        <a class="menu-link" (click)="closeMenu()">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-dot">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                </svg><span class="ms-2">Profile</span></div>
+        </a>
+        <a class="menu-link" (click)="closeMenu()">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-dot">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                </svg><span class="ms-2">Account Settings</span></div>
+        </a>
+        <a class="menu-link" (click)="closeMenu()">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-dot">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                </svg><span class="ms-2 text-primary fw-bold">Logout</span></div>
+        </a>
+        <h6 class="main-heading">admin</h6>
+        <hr>
+        <a class="menu-link" (click)="closeMenu()">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-dot">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                </svg><span class="ms-2">Manage Users</span></div>
+        </a>
+        <a class="menu-link" (click)="closeMenu()">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-dot">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                </svg><span class="ms-2">Manage Branches</span></div>
+        </a>
+        <a class="menu-link" (click)="closeMenu()">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-dot">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                </svg><span class="ms-2">Manage Roles</span></div>
+        </a>
+    </div>
+</div>
+<div class="menu-backdrop" [ngClass]="{'in': shownav}" (click)="closeMenu()"></div>

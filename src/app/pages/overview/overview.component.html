@@ -1,0 +1,11 @@
+<app-dash-header [showleft]="showleft" [showright]="showright" (leftnav)="setLeftNav($event)" (rightnav)="setRightNav($event)"></app-dash-header>
+<app-left-side-nav (close)="setLeftNav($event)" [shownav]="showleft"></app-left-side-nav>
+<app-right-side-nav (close)="setRightNav($event)" [shownav]="showright"></app-right-side-nav>
+
+<div class="container-fluid mt-3 mb-3">
+    <div class="row">
+        <div class="col">
+            <app-data-grid></app-data-grid>
+        </div>
+    </div>
+</div>

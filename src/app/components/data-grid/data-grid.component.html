@@ -1,0 +1,41 @@
+<kendo-grid [kendoGridBinding]="gridView" [pageSize]="20" [pageable]="true" [sortable]="true" [groupable]="true" [reorderable]="true" [selectable]="selectableSettings" [resizable]="true" [columnMenu]="{ filter: true }">
+    <ng-template kendoGridToolbarTemplate>
+        <input placeholder="Search in all columns..." kendoTextBox (input)="filterData($event)" />
+        <kendo-grid-spacer></kendo-grid-spacer>
+        <button kendoGridExcelCommand type="button" icon="file-excel">
+        Export to Excel
+      </button>
+        <button kendoGridPDFCommand [primary]="true" icon="file-pdf">Export to PDF</button>
+        <!-- <div>
+          <kendo-chip *ngFor="let d of categories.axleConfigurations" [label]="d.key">
+          </kendo-chip>
+      </div> -->
+    </ng-template>
+    <kendo-grid-column-group title="Vehicle Information" [columnMenu]="false">
+        <kendo-grid-column title="Gallery">
+            <ng-template kendoGridCellTemplate let-dataItem>
+                <div (click)="showGallery(dataItem.Images.other)" class="vehicle-photo" [ngStyle]="{ 'background-image': 'url(' + dataItem.Images.other[0] + ')' }"></div>
+            </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="Make" title="Make"></kendo-grid-column>
+        <kendo-grid-column field="Model" title="Model"></kendo-grid-column>
+        <kendo-grid-column field="Variant" title="Variant"></kendo-grid-column>
+        <kendo-grid-column field="Colour" title="Colour"></kendo-grid-column>
+        <kendo-grid-column field="Year" title="Year"></kendo-grid-column>
+    </kendo-grid-column-group>
+
+    <kendo-grid-pdf fileName="Employees.pdf" [repeatHeaders]="true"></kendo-grid-pdf>
+    <kendo-grid-excel fileName="Employees.xlsx"></kendo-grid-excel>
+</kendo-grid>
+
+<div class="gallery" [ngClass]="{'in': gallery.length > 0}">
+    <button class="clsoe-btn" (click)="closeGallery()">Close</button>
+    <ng-container *ngIf="gallery.length > 0">
+        <div class="active-image" [ngStyle]="{ 'background-image': 'url(' + activeImage + ')' }"></div>
+        <div class="thumbnail-previews">
+            <ng-container *ngFor="let g of gallery">
+                <div class="thumbnail-images" (click)="setActiveImage(g)" [ngClass]="{'active': activeImage === g}" [ngStyle]="{ 'background-image': 'url(' + g + ')' }"></div>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>

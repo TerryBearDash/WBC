@@ -1,0 +1,16 @@
+.form-control {
+    font-style: italic;
+    font-size: 12px !important;
+    min-height: 40px;
+    background-color: rgba(0,0,0,0.1) !important;
+    border: 0 !important;
+    transition: all ease-in-out 0.4s;
+    
+    &:focus {
+        outline: 0 !important;
+        box-shadow: none !important;
+        background-color: rgba(0,0,0,0.4) !important;
+        transition: all ease-in-out 0.4s;
+        color: #fff !important;
+    }
+}

@@ -39,8 +39,7 @@
                             "src/assets/styles/main.scss",
                             "src/assets/styles/left-side-nav.scss",
                             "src/assets/styles/right-side-nav.scss",
-                            "src/assets/styles/forms.scss",
-                            "src/styles.scss"
+                            "src/assets/styles/forms.scss"
                         ],
                         "scripts": []
                     },
@@ -49,7 +48,7 @@
                             "budgets": [{
                                     "type": "initial",
                                     "maximumWarning": "500kb",
-                                    "maximumError": "1mb"
+                                    "maximumError": "5mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",

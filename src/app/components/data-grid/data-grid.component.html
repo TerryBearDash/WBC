@@ -29,13 +29,15 @@
 </kendo-grid>
 
 <div class="gallery" [ngClass]="{'in': gallery.length > 0}">
-    <button class="clsoe-btn" (click)="closeGallery()">Close</button>
-    <ng-container *ngIf="gallery.length > 0">
-        <div class="active-image" [ngStyle]="{ 'background-image': 'url(' + activeImage + ')' }"></div>
-        <div class="thumbnail-previews">
-            <ng-container *ngFor="let g of gallery">
-                <div class="thumbnail-images" (click)="setActiveImage(g)" [ngClass]="{'active': activeImage === g}" [ngStyle]="{ 'background-image': 'url(' + g + ')' }"></div>
-            </ng-container>
-        </div>
-    </ng-container>
+    <div class="container">
+        <button class="btn btn-outline-light" (click)="closeGallery()">Close</button>
+        <ng-container *ngIf="gallery.length > 0">
+            <div class="active-image" [ngStyle]="{ 'background-image': 'url(' + activeImage + ')' }"></div>
+            <div class="thumbnail-previews">
+                <ng-container *ngFor="let g of gallery">
+                    <div class="thumbnail-images" (click)="setActiveImage(g)" [ngClass]="{'active': activeImage === g}" [ngStyle]="{ 'background-image': 'url(' + g + ')' }"></div>
+                </ng-container>
+            </div>
+        </ng-container>
+    </div>
 </div>
